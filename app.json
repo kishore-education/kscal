@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "kscal3",
-    "slug": "kscal3",
+    "name": "kscal",
+    "slug": "kscal",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -19,10 +19,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.kishore02.kscal"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "34f50505-bd0f-4a5e-8909-433941d6234c"
+      }
     }
   }
 }
