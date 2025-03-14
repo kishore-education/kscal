@@ -92,6 +92,12 @@ export const saveCustomerListToStorage = async (customerList) => {
     const existingListJson = await AsyncStorage.getItem(AS_CUSTOMERS_KEY);
     const existingList = existingListJson ? JSON.parse(existingListJson) : [];
     existingList.push(customerList);
+    
+    // Keep only the last 10 bills
+    if (existingList.length > 10) {
+      existingList.splice(0, existingList.length - 10);
+    }
+    
     await AsyncStorage.setItem(AS_CUSTOMERS_KEY, JSON.stringify(existingList));
     console.log('Customer list saved to AsyncStorage');
     return true;

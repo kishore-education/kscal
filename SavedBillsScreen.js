@@ -9,7 +9,7 @@ const SavedBillsScreen = ({ navigation }) => {
   useEffect(() => {
     const fetchSavedBills = async () => {
       const bills = await loadCustomerListFromStorage();
-      setSavedBills(bills);
+      setSavedBills(bills.reverse()); // Reverse the list to show the last saved bill first
     };
 
     fetchSavedBills();
